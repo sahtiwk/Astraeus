@@ -1,0 +1,8 @@
+[INFO] 2026-05-29 12:00:01 GET /index.html 200
+[INFO] 2026-05-29 12:00:05 GET /assets/style.css 200
+[WARN] 2026-05-29 12:00:10 GET /api/v1/users 429 Rate limited
+[ERROR] 2026-05-29 12:00:12 GET /api/v1/billing 500 Internal Server Error
+[ERROR] 2026-05-29 12:00:13 GET /api/v1/billing 500 Internal Server Error
+[ERROR] 2026-05-29 12:00:14 GET /api/v1/billing 500 Internal Server Error
+[ERROR] 2026-05-29 12:00:15 GET /api/v1/billing 500 Internal Server Error
+[INFO] 2026-05-29 12:00:20 GET /contact 200

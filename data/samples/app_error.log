@@ -1,0 +1,8 @@
+2026-05-29 10:00:01 INFO auth-service User logged in successfully
+2026-05-29 10:00:05 INFO payment-service Processing transaction
+2026-05-29 10:00:10 WARN payment-service Processing taking longer than expected
+2026-05-29 10:00:12 ERROR payment-service NullPointerException at Transaction.process(Transaction.java:45)
+2026-05-29 10:00:12 ERROR payment-service NullPointerException at Transaction.verify(Transaction.java:80)
+2026-05-29 10:00:13 ERROR payment-service NullPointerException at UserAccount.deduct(UserAccount.java:100)
+2026-05-29 10:00:15 CRITICAL payment-service Transaction system crashed, restarting...
+2026-05-29 10:00:20 INFO auth-service User logged out

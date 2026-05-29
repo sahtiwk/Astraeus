@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  astraeus:
+    build: .
+    container_name: astraeus_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./.env:/app/.env
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
