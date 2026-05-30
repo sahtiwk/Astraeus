@@ -1,36 +1,23 @@
 import os
 from typing import List
-from google import genai
-from dotenv import load_dotenv
 
-load_dotenv()
+# Cache the model so we don't reload it from disk on every embedding call
+_model = None
 
-
-def get_embedding(text: str, model: str = "text-embedding-004") -> List[float]:
+def get_embedding(text: str, model: str = "all-MiniLM-L6-v2") -> List[float]:
     """
-    Generate embedding for a given text using Google Gemini API.
+    Generate embedding for a given text using a local HuggingFace SentenceTransformer model.
     """
     if not text or not text.strip():
         return []
     
-    key = os.getenv("GEMINI_API_KEY")
-    if not key:
-        raise ValueError("GEMINI_API_KEY is not set in the environment or .env file.")
-    
-    client = genai.Client(api_key=key)
-    
+    global _model
+    if _model is None:
+        from sentence_transformers import SentenceTransformer
+        _model = SentenceTransformer(model)
+        
     try:
-        if model.startswith("models/"):
-            model = model[len("models/"):]
-            
-        response = client.models.embed_content(
-            model=model,
-            contents=text
-        )
-        
-        if hasattr(response, "embeddings") and response.embeddings:
-            return response.embeddings[0].values
-        
-        return []
+        embedding = _model.encode(text)
+        return embedding.tolist()
     except Exception as e:
         raise RuntimeError(f"Failed to generate embedding: {e}")

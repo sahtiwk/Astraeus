@@ -57,10 +57,16 @@ def detect_anomalies(
             else:
                 severity = "LOW"
                 
-            chunk_text = "\n".join([e.raw_line for e in window_events])
+            # Filter out normal logs and strip timestamps to create a highly focused semantic signature
+            relevant_logs = [e for e in window_events if e.level in ["WARN", "ERROR", "FATAL", "CRITICAL"]]
+            if not relevant_logs:
+                relevant_logs = window_events
+                
+            chunk_text = "\n".join([f"[{e.level}] {e.service} {e.message}" for e in relevant_logs])
             
             import hashlib
-            chunk_hash = hashlib.md5(chunk_text.encode('utf-8')).hexdigest()
+            # Make sure chunk_id is unique even if the text signature is identical
+            chunk_hash = hashlib.md5(f"{start_ts}_{chunk_text}".encode('utf-8')).hexdigest()
             
             chunk = AnomalyChunk(
                 chunk_id=chunk_hash,

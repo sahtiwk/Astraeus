@@ -61,6 +61,8 @@ cover/
 # Data and Vector Store
 data/chromadb/
 data/test_chromadb/
+tests/test_100k.log
+tests/ground_truth.json
 
 # Jupyter Notebook
 .ipynb_checkpoints

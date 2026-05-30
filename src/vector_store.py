@@ -27,7 +27,7 @@ class VectorStore:
         embeddings = []
         metadatas = []
         
-        for chunk in chunks:
+        for i, chunk in enumerate(chunks):
             try:
                 embedding = get_embedding(chunk.chunk_text)
                 if not embedding:
@@ -42,9 +42,13 @@ class VectorStore:
                     "severity": chunk.severity,
                     "keywords": ",".join(chunk.keywords)
                 })
+                
+                # Print progress every 100 chunks
+                if (i + 1) % 100 == 0:
+                    print(f"Indexed {i + 1}/{len(chunks)} anomalies locally...")
+            
             except Exception as e:
                 print(f"Skipping indexing chunk {chunk.chunk_id} due to error: {e}")
-                continue
             
         if ids:
             self.collection.upsert(
