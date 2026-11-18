@@ -1,0 +1,12 @@
+services:
+  astraeus:
+    build: .
+    ports:
+      - "127.0.0.1:8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models:ro
+    environment:
+      ASTRAEUS_EMBEDDING_MODEL: /app/models/embedding
+# Core/search only unless a local inference server is in the same container.
+# A host llama.cpp server is deliberately not reachable through the loopback-only client.

@@ -1,0 +1,1364 @@
+{
+  "partial": false,
+  "split": "validation",
+  "model": "astraeus-qwen3-1.7b",
+  "semantic": true,
+  "metrics": {
+    "cases": 27,
+    "detection_precision": 1.0,
+    "detection_recall": 1.0,
+    "false_alerts": 0,
+    "latency_p50_s": 7.185890699998708,
+    "latency_p95_s": 13.006020000000717,
+    "peak_process_tree_rss_gib": 3.9889488220214844,
+    "lexical_hit_at_3": 1.0,
+    "semantic_hit_at_3": 1.0,
+    "base": {
+      "attempts": 24,
+      "valid_reports": 24,
+      "term_match_proxy": 0.6666666666666666
+    },
+    "retrieval": {
+      "attempts": 24,
+      "valid_reports": 24,
+      "term_match_proxy": 0.75
+    }
+  },
+  "rows": [
+    {
+      "id": "missing_config-006",
+      "family": "missing_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 7.581331299996236,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Untrusted logs provided. Hypothesis: Missing configuration 'SERVICE_ENDPOINT_6' in application logs.",
+            "probable_root_cause": "Missing required configuration 'SERVICE_ENDPOINT_6' in application logs.",
+            "confidence": 0.5,
+            "severity": "LOW",
+            "affected_component": "Application",
+            "evidence_lines": [
+              "[ERROR] example-0 KeyError: missing required configuration 'SERVICE_ENDPOINT_6'",
+              "[ERROR] example-0 KeyError: missing required configuration 'SERVICE_ENDPOINT_6'"
+            ],
+            "recommended_actions": [
+              "Check application configuration files for 'SERVICE_ENDPOINT_6'",
+              "Verify environment variables for 'SERVICE_ENDPOINT_6'",
+              "Ensure required configuration is included in deployment packages"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 7.5878292999987025,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Potential configuration error in service endpoint validation",
+            "probable_root_cause": "Missing required configuration 'SERVICE_ENDPOINT_6' in service initialization",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Service initialization",
+            "evidence_lines": [
+              "[ERROR] example-0 KeyError: missing required configuration 'SERVICE_ENDPOINT_6'",
+              "[ERROR] example-0 KeyError: missing required configuration 'SERVICE_ENDPOINT_6'"
+            ],
+            "recommended_actions": [
+              "Verify that 'SERVICE_ENDPOINT_6' is correctly configured in the service initialization parameters",
+              "Check the service configuration files for missing or incorrect entries",
+              "Ensure that the service is restarted after configuration changes"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "missing_config-007",
+      "family": "missing_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.482097700005397,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Untrusted logs provided, insufficient evidence for confirmed cause.",
+            "probable_root_cause": "KeyError: missing required configuration 'SERVICE_ENDPOINT_7'",
+            "confidence": 0.3,
+            "severity": "LOW",
+            "affected_component": "Configuration",
+            "evidence_lines": [
+              "[ERROR] example-1 KeyError: missing required configuration 'SERVICE_ENDPOINT_7'",
+              "[ERROR] example-1 KeyError: missing required configuration 'SERVICE_ENDPOINT_7'"
+            ],
+            "recommended_actions": [
+              "Verify configuration files for required parameters",
+              "Check environment variables for 'SERVICE_ENDPOINT_7'",
+              "Review deployment logs for missing configuration entries"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 7.185890699998708,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Potential configuration error in service endpoint detection",
+            "probable_root_cause": "Missing required configuration 'SERVICE_ENDPOINT_7' in current incident",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Service endpoint configuration",
+            "evidence_lines": [
+              "[ERROR] example-1 KeyError: missing required configuration 'SERVICE_ENDPOINT_7'",
+              "[ERROR] example-1 KeyError: missing required configuration 'SERVICE_ENDPOINT_7'"
+            ],
+            "recommended_actions": [
+              "Verify that 'SERVICE_ENDPOINT_7' is configured in the service settings",
+              "Check logs for any related errors or warnings",
+              "Ensure that the service is properly initialized with the required configuration"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "missing_config-008",
+      "family": "missing_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 7.103742000006605,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Untrusted logs provided, insufficient evidence for confirmed cause.",
+            "probable_root_cause": "KeyError: missing required configuration 'SERVICE_ENDPOINT_8'",
+            "confidence": 0.3,
+            "severity": "LOW",
+            "affected_component": "Configuration",
+            "evidence_lines": [
+              "[ERROR] example-2 KeyError: missing required configuration 'SERVICE_ENDPOINT_8'",
+              "[ERROR] example-2 KeyError: missing required configuration 'SERVICE_ENDPOINT_8'"
+            ],
+            "recommended_actions": [
+              "Check the configuration file for 'SERVICE_ENDPOINT_8'",
+              "Verify that the required configuration is set in the environment or through a configuration manager",
+              "Ensure that the service is properly initialized with the required parameters"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 7.89093250001315,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Potential configuration error in example-2 due to missing 'SERVICE_ENDPOINT_8'",
+            "probable_root_cause": "Missing required configuration 'SERVICE_ENDPOINT_8' in example-2",
+            "confidence": 0.7,
+            "severity": "LOW",
+            "affected_component": "example-2",
+            "evidence_lines": [
+              "[ERROR] example-2 KeyError: missing required configuration 'SERVICE_ENDPOINT_8'",
+              "[ERROR] example-2 KeyError: missing required configuration 'SERVICE_ENDPOINT_8'"
+            ],
+            "recommended_actions": [
+              "Verify that 'SERVICE_ENDPOINT_8' is configured in the setup for example-2",
+              "Check if the required configuration file for example-2 is properly initialized",
+              "Ensure that the environment variables or configuration files for example-2 are correctly set"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "invalid_config-006",
+      "family": "invalid_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.093388700013747,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Untrusted logs provided, insufficient evidence for confirmed cause",
+            "probable_root_cause": "JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+            "confidence": 0.3,
+            "severity": "LOW",
+            "affected_component": "JSON decoding",
+            "evidence_lines": [
+              "[ERROR] example-0 JSONDecodeError: Expecting property name enclosed in double quotes at line 1"
+            ],
+            "recommended_actions": [
+              "Verify the input data format before decoding",
+              "Implement error handling for JSON decoding",
+              "Use a robust JSON parser with validation"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 9.521834500017576,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Multiple JSONDecodeError logs indicating a potential issue with parsing JSON data.",
+            "probable_root_cause": "The error suggests that the parser is encountering a malformed JSON string, likely due to improper formatting or missing quotes in the input data.",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "JSON parsing module",
+            "evidence_lines": [
+              "[ERROR] example-0 JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+              "[ERROR] example-0 JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+              "[ERROR] example-0 JSONDecodeError: Expecting property name enclosed in double quotes at line 1"
+            ],
+            "recommended_actions": [
+              "Validate JSON input data for proper formatting and quotes.",
+              "Implement error handling for JSON parsing to gracefully handle malformed inputs.",
+              "Consider using a more robust JSON parser with validation capabilities."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "invalid_config-007",
+      "family": "invalid_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.593025599984685,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Potential JSON decoding error in log entry",
+            "probable_root_cause": "JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+            "confidence": 0.7,
+            "severity": "LOW",
+            "affected_component": "JSON decoding",
+            "evidence_lines": [
+              "[ERROR] example-1 JSONDecodeError: Expecting property name enclosed in double quotes at line 1"
+            ],
+            "recommended_actions": [
+              "Verify that the input data is in valid JSON format",
+              "Check for any special characters or escape sequences in the input",
+              "Ensure that the decoding function is properly configured to handle property names with special characters"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 9.369479599990882,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Multiple JSONDecodeError logs indicating a potential issue with parsing JSON data.",
+            "probable_root_cause": "The logs show repeated JSONDecodeError messages, suggesting a consistent parsing failure. This could be due to malformed JSON, incorrect formatting, or issues with the parsing library.",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "JSON parsing module",
+            "evidence_lines": [
+              "[ERROR] example-1 JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+              "[ERROR] example-1 JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+              "[ERROR] example-1 JSONDecodeError: Expecting property name enclosed in double quotes at line 1"
+            ],
+            "recommended_actions": [
+              "Validate JSON input for proper formatting and structure.",
+              "Check for potential malformed JSON data.",
+              "Consider updating the JSON parsing library or configuration."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "invalid_config-008",
+      "family": "invalid_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.132005999999819,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Untrusted logs provided, insufficient evidence for confirmed cause",
+            "probable_root_cause": "JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+            "confidence": 0.5,
+            "severity": "LOW",
+            "affected_component": "JSON decoding",
+            "evidence_lines": [
+              "[ERROR] example-2 JSONDecodeError: Expecting property name enclosed in double quotes at line 1"
+            ],
+            "recommended_actions": [
+              "Verify the input data format before decoding",
+              "Implement error handling for JSON decoding",
+              "Use a robust JSON parser with validation"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 8.629162199998973,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+            "probable_root_cause": "Repeated JSONDecodeError suggests a consistent parsing error in the input data, likely due to malformed JSON or missing quotes in property names.",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "example-2",
+            "evidence_lines": [
+              "[ERROR] example-2 JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+              "[ERROR] example-2 JSONDecodeError: Expecting property name enclosed in double quotes at line 1"
+            ],
+            "recommended_actions": [
+              "Validate input data for JSON format correctness.",
+              "Ensure proper quoting of property names in JSON strings.",
+              "Check for potential data corruption or malformed input."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "database_locked-006",
+      "family": "database_locked",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 5.384768099989742,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "OperationalError: database is locked; concurrent writer transaction active",
+            "probable_root_cause": "Concurrency issue in database transaction",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-0 OperationalError: database is locked; concurrent writer transaction active"
+            ],
+            "recommended_actions": [
+              "Monitor database for concurrent transactions",
+              "Review application code for locking mechanisms",
+              "Consider increasing database lock timeout settings"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 9.462123899982544,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Multiple instances of OperationalError: database is locked; concurrent writer transaction active observed in example-0 and example-1.",
+            "probable_root_cause": "Concurrency issues in database operations, likely due to simultaneous write operations by different transactions.",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-0 OperationalError: database is locked; concurrent writer transaction active",
+              "[ERROR] example-0 OperationalError: database is locked; concurrent writer transaction active",
+              "[ERROR] example-0 OperationalError: database is locked; concurrent writer transaction active",
+              "[ERROR] example-0 OperationalError: database is locked; concurrent writer transaction active"
+            ],
+            "recommended_actions": [
+              "Monitor database performance and identify concurrent write operations.",
+              "Review transaction logs to detect conflicting transactions.",
+              "Consider implementing database locking mechanisms or optimizing queries to reduce contention."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "database_locked-007",
+      "family": "database_locked",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.340190299990354,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "OperationalError: database is locked; concurrent writer transaction active",
+            "probable_root_cause": "Concurrency issue involving multiple writers attempting to write to the same database resource.",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-1 OperationalError: database is locked; concurrent writer transaction active"
+            ],
+            "recommended_actions": [
+              "Monitor database performance and identify the number of concurrent writers.",
+              "Consider implementing database locking mechanisms or using read-write locks to prevent concurrent writes.",
+              "Review database configuration and consider optimizing queries to reduce contention."
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 9.617470299999695,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Multiple instances of OperationalError: database is locked due to concurrent writer transactions",
+            "probable_root_cause": "Concurrency issues in database writes, likely due to multiple transactions attempting to modify the same database simultaneously",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-1 OperationalError: database is locked; concurrent writer transaction active",
+              "[ERROR] example-1 OperationalError: database is locked; concurrent writer transaction active",
+              "[ERROR] example-1 OperationalError: database is locked; concurrent writer transaction active"
+            ],
+            "recommended_actions": [
+              "Monitor database concurrency using tools like `pg_stat_activity` (for PostgreSQL) or `SHOW ENGINE INNODB STATUS` (for MySQL).",
+              "Consider implementing database locking mechanisms or using read-write locks to prevent concurrent write conflicts.",
+              "Review application logic to ensure proper transaction handling and isolation levels."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "database_locked-008",
+      "family": "database_locked",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 5.895445500005735,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "OperationalError: database is locked; concurrent writer transaction active",
+            "probable_root_cause": "Concurrency issue involving simultaneous write operations on the database",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-2 OperationalError: database is locked; concurrent writer transaction active"
+            ],
+            "recommended_actions": [
+              "Monitor database for concurrent write contention",
+              "Review transaction logs for conflicting write operations",
+              "Consider optimizing database queries or increasing resources to reduce contention"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 8.078012799989665,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated OperationalError: database is locked due to concurrent writer transactions",
+            "probable_root_cause": "Concurrency issues in database writes, likely due to multiple transactions attempting to modify the same data simultaneously",
+            "confidence": 0.6,
+            "severity": "HIGH",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-2 OperationalError: database is locked; concurrent writer transaction active",
+              "[ERROR] example-2 OperationalError: database is locked; concurrent writer transaction active",
+              "[ERROR] example-2 OperationalError: database is locked; concurrent writer transaction active"
+            ],
+            "recommended_actions": [
+              "Monitor database performance and identify concurrent writer transactions",
+              "Optimize database queries to reduce contention",
+              "Consider using database locking mechanisms or read-write isolation strategies"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "unique_violation-006",
+      "family": "unique_violation",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.437168400007067,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "IntegrityError: UNIQUE constraint failed for items.id",
+            "probable_root_cause": "A duplicate entry was inserted for the items.id field, violating the UNIQUE constraint.",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-0 IntegrityError: UNIQUE constraint failed: items.id; insert rejected"
+            ],
+            "recommended_actions": [
+              "Verify that the items.id field is unique across all records.",
+              "Check for duplicate entries in the items table.",
+              "Review the application logic that inserts data into the items table to ensure uniqueness is enforced."
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 8.480775000003632,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated IntegrityError: UNIQUE constraint failed: items.id; insert rejected",
+            "probable_root_cause": "Repeated attempts to insert duplicate items.id values into the database, violating the UNIQUE constraint on the items.id column.",
+            "confidence": 0.7,
+            "severity": "HIGH",
+            "affected_component": "database",
+            "evidence_lines": [
+              "[ERROR] example-0 IntegrityError: UNIQUE constraint failed: items.id; insert rejected",
+              "[ERROR] example-0 IntegrityError: UNIQUE constraint failed: items.id; insert rejected",
+              "[ERROR] example-0 IntegrityError: UNIQUE constraint failed: items.id; insert rejected"
+            ],
+            "recommended_actions": [
+              "Implement a check to ensure unique item IDs before insertion.",
+              "Review the application logic to prevent duplicate entries.",
+              "Monitor database logs for repeated errors and optimize insertion processes."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "unique_violation-007",
+      "family": "unique_violation",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.8969594000082,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Uniqueness constraint violation during insertion",
+            "probable_root_cause": "A duplicate item with the same ID was attempted to be inserted into the database, violating the UNIQUE constraint on the 'id' field.",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-1 IntegrityError: UNIQUE constraint failed: items.id; insert rejected"
+            ],
+            "recommended_actions": [
+              "Implement a check to ensure unique IDs are generated properly before insertion.",
+              "Use a database tool to monitor for duplicate entries and alert on them.",
+              "Review the application logic that generates IDs to prevent duplicates."
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 8.603094899997814,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated IntegrityError: UNIQUE constraint failed: items.id; insert rejected",
+            "probable_root_cause": "Repeated attempts to insert duplicate items.id values into the database, leading to constraint violations.",
+            "confidence": 0.75,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-1 IntegrityError: UNIQUE constraint failed: items.id; insert rejected",
+              "[ERROR] example-1 IntegrityError: UNIQUE constraint failed: items.id; insert rejected",
+              "[ERROR] example-1 IntegrityError: UNIQUE constraint failed: items.id; insert rejected"
+            ],
+            "recommended_actions": [
+              "Implement a check to ensure unique item.id values before insertion.",
+              "Monitor for duplicate entries in the items.id column.",
+              "Consider using a database index on the items.id column to optimize insertion performance."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "unique_violation-008",
+      "family": "unique_violation",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 7.088696899998467,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Uniqueness constraint violation during insertion",
+            "probable_root_cause": "Attempted to insert a duplicate 'id' value into the 'items' table, which has a UNIQUE constraint on 'id'",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-2 IntegrityError: UNIQUE constraint failed: items.id; insert rejected"
+            ],
+            "recommended_actions": [
+              "Verify that the 'id' values being inserted are unique",
+              "Check for duplicate entries in the 'items' table",
+              "Review the application logic for id generation",
+              "Ensure that the database constraints are properly enforced"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 15.006055099976948,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated IntegrityError: UNIQUE constraint failed: items.id during insert operations",
+            "probable_root_cause": "Repeated attempts to insert records with duplicate 'items.id' values into the database, leading to constraint violations",
+            "confidence": 0.75,
+            "severity": "MEDIUM",
+            "affected_component": "Database insertion mechanism",
+            "evidence_lines": [
+              "[ERROR] example-2 IntegrityError: UNIQUE constraint failed: items.id; insert rejected",
+              "[ERROR] example-2 IntegrityError: UNIQUE constraint failed: items.id; insert rejected",
+              "[ERROR] example-2 IntegrityError: UNIQUE constraint failed: items.id; insert rejected"
+            ],
+            "recommended_actions": [
+              "Implement unique constraint validation on 'items.id' field",
+              "Monitor database insertion logs for duplicate entries",
+              "Optimize data ingestion process to avoid duplicate records"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "missing_file-006",
+      "family": "missing_file",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 5.480605699995067,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "File not found error in configuration",
+            "probable_root_cause": "Missing configuration file",
+            "confidence": 0.6,
+            "severity": "LOW",
+            "affected_component": "Configuration system",
+            "evidence_lines": [
+              "[ERROR] example-0 FileNotFoundError: config-6.json does not exist"
+            ],
+            "recommended_actions": [
+              "Check if config-6.json exists in the expected directory",
+              "Verify file permissions for the configuration directory",
+              "Ensure the configuration file is included in the deployment package"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 6.196981699991738,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Potential configuration file missing error",
+            "probable_root_cause": "Missing configuration file",
+            "confidence": 0.7,
+            "severity": "LOW",
+            "affected_component": "config_file_handling",
+            "evidence_lines": [
+              "[ERROR] example-0 FileNotFoundError: config-6.json does not exist",
+              "[ERROR] example-0 FileNotFoundError: config-6.json does not exist"
+            ],
+            "recommended_actions": [
+              "Check if configuration files exist in the expected directory",
+              "Verify file paths and names for consistency",
+              "Ensure proper permissions for configuration file access"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "missing_file-007",
+      "family": "missing_file",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 7.083324500010349,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "A FileNotFoundError occurred for file 'config-7.json' in the process of executing 'example-1'.",
+            "probable_root_cause": "The program attempted to access 'config-7.json' but it did not exist in the specified directory.",
+            "confidence": 0.7,
+            "severity": "LOW",
+            "affected_component": "example-1",
+            "evidence_lines": [
+              "[ERROR] example-1 FileNotFoundError: config-7.json does not exist"
+            ],
+            "recommended_actions": [
+              "Verify the existence of 'config-7.json' in the expected directory.",
+              "Check the path or filename for typos or incorrect specifications.",
+              "Ensure the program has proper access permissions to the file location."
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 6.446361199981766,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Potential configuration file missing error",
+            "probable_root_cause": "Missing configuration file",
+            "confidence": 0.7,
+            "severity": "LOW",
+            "affected_component": "Configuration file handling",
+            "evidence_lines": [
+              "[ERROR] example-1 FileNotFoundError: config-7.json does not exist",
+              "[ERROR] example-1 FileNotFoundError: config-7.json does not exist"
+            ],
+            "recommended_actions": [
+              "Check if configuration files are properly generated or placed in the correct directory",
+              "Verify if the application is looking for the correct configuration file",
+              "Ensure that the configuration file exists and is accessible"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "missing_file-008",
+      "family": "missing_file",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.885684500011848,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "A FileNotFoundError occurred for file config-8.json",
+            "probable_root_cause": "The file config-8.json was not found in the specified directory",
+            "confidence": 0.7,
+            "severity": "LOW",
+            "affected_component": "File system access",
+            "evidence_lines": [
+              "[ERROR] example-2 FileNotFoundError: config-8.json does not exist",
+              "[ERROR] example-2 FileNotFoundError: config-8.json does not exist"
+            ],
+            "recommended_actions": [
+              "Verify the existence of config-8.json in the specified directory",
+              "Check file permissions for the target directory",
+              "Review the application's configuration to ensure correct path is used"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 7.677122200024314,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Diagnosing the incident based on available logs",
+            "probable_root_cause": "The error indicates a missing configuration file, likely config-8.json, which may be a variation or a new file not yet created.",
+            "confidence": 0.75,
+            "severity": "LOW",
+            "affected_component": "example-2",
+            "evidence_lines": [
+              "[ERROR] example-2 FileNotFoundError: config-8.json does not exist",
+              "[ERROR] example-2 FileNotFoundError: config-8.json does not exist"
+            ],
+            "recommended_actions": [
+              "Check if config-8.json exists in the expected directory",
+              "Verify if the configuration file is required for the current operation",
+              "Ensure that the file is properly created or added to the project"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "connection_refused-006",
+      "family": "connection_refused",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 7.047849099995801,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "ConnectionRefusedError: connection refused by local dependency; listener is not running",
+            "probable_root_cause": "Uninitialized or failed listener process in local dependency",
+            "confidence": 0.5,
+            "severity": "LOW",
+            "affected_component": "Local dependency listener",
+            "evidence_lines": [
+              "[ERROR] example-0 ConnectionRefusedError: connection refused by local dependency; listener is not running",
+              "[ERROR] example-0 ConnectionRefusedError: connection refused by local dependency; listener is not running"
+            ],
+            "recommended_actions": [
+              "Verify that the listener process is running",
+              "Check logs for any errors related to the listener",
+              "Ensure the dependency is properly configured and initialized"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 9.379562399990391,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated ConnectionRefusedError logs for example-0 and example-1",
+            "probable_root_cause": "Local dependency listener not running due to configuration error or resource unavailability",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "example-0 and example-1",
+            "evidence_lines": [
+              "[ERROR] example-0 ConnectionRefusedError: connection refused by local dependency; listener is not running",
+              "[ERROR] example-0 ConnectionRefusedError: connection refused by local dependency; listener is not running",
+              "[ERROR] example-0 ConnectionRefusedError: connection refused by local dependency; listener is not running"
+            ],
+            "recommended_actions": [
+              "Check if listener is running on the specified port",
+              "Verify configuration settings for the local dependency",
+              "Ensure sufficient resources are available for the dependency",
+              "Review logs for any additional error messages or warnings"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "connection_refused-007",
+      "family": "connection_refused",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 5.874846699996851,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Potential connection issue with local dependency",
+            "probable_root_cause": "Unverified log entry indicating connection refused by local dependency",
+            "confidence": 0.3,
+            "severity": "LOW",
+            "affected_component": "example-1",
+            "evidence_lines": [
+              "[ERROR] example-1 ConnectionRefusedError: connection refused by local dependency; listener is not running"
+            ],
+            "recommended_actions": [
+              "Verify that the listener is running on the local dependency",
+              "Check network connectivity between the dependent component and the listener",
+              "Review logs for any additional error messages or warnings"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 13.006020000000717,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated ConnectionRefusedError logs indicating listener is not running",
+            "probable_root_cause": "Repeated attempts to connect to listener failed, suggesting listener is not running or configuration is incorrect",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "example-1",
+            "evidence_lines": [
+              "[ERROR] example-1 ConnectionRefusedError: connection refused by local dependency; listener is not running",
+              "[ERROR] example-1 ConnectionRefusedError: connection refused by local dependency; listener is not running",
+              "[ERROR] example-1 ConnectionRefusedError: connection refused by local dependency; listener is not running"
+            ],
+            "recommended_actions": [
+              "Check if listener is running",
+              "Verify listener configuration",
+              "Ensure proper network access",
+              "Review dependency logs for more details"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "connection_refused-008",
+      "family": "connection_refused",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.53718710000976,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Untrusted logs provided; no diagnostic checks recommended",
+            "probable_root_cause": "Unable to determine root cause from untrusted logs",
+            "confidence": 0.0,
+            "severity": "LOW",
+            "affected_component": "example-2",
+            "evidence_lines": [
+              "[ERROR] example-2 ConnectionRefusedError: connection refused by local dependency; listener is not running"
+            ],
+            "recommended_actions": [
+              "Verify that the listener is running on the local dependency",
+              "Check network connectivity between the dependent component and the listener",
+              "Review logs for any additional error messages or warnings"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 9.849864999996498,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated ConnectionRefusedError logs for example-2 and example-1, indicating listener not running",
+            "probable_root_cause": "Repeated logs suggest a persistent issue with the listener not being started or configured correctly",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "example-2 and example-1",
+            "evidence_lines": [
+              "[ERROR] example-2 ConnectionRefusedError: connection refused by local dependency; listener is not running",
+              "[ERROR] example-2 ConnectionRefusedError: connection refused by local dependency; listener is not running",
+              "[ERROR] example-2 ConnectionRefusedError: connection refused by local dependency; listener is not running"
+            ],
+            "recommended_actions": [
+              "Check if the listener is properly configured and running",
+              "Verify that the dependency is correctly bound to the listener",
+              "Review logs for any additional error messages or warnings"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "pool_exhausted-006",
+      "family": "pool_exhausted",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 7.096450599987293,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: connection pool exhausted; active=1 capacity=1 available=0",
+            "probable_root_cause": "Potential connection pool exhaustion due to high concurrent requests or resource limitations.",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "Connection pool",
+            "evidence_lines": [
+              "[ERROR] example-0 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0"
+            ],
+            "recommended_actions": [
+              "Monitor connection pool usage and adjust capacity based on workload.",
+              "Optimize application logic to reduce concurrent requests.",
+              "Implement connection pooling with appropriate size and timeout settings."
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 9.803618400008418,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated TimeoutError: connection pool exhausted; active=1 capacity=1 available=0",
+            "probable_root_cause": "Repeated attempts to establish a connection to the database pool resulted in the pool being exhausted, leading to timeout errors.",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database connection pool",
+            "evidence_lines": [
+              "[ERROR] example-0 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0",
+              "[ERROR] example-0 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0",
+              "[ERROR] example-0 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0"
+            ],
+            "recommended_actions": [
+              "Monitor the database connection pool usage and capacity.",
+              "Review the application's database connection configuration and limits.",
+              "Consider increasing the pool capacity if necessary.",
+              "Implement connection pooling with proper size and timeout settings."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "pool_exhausted-007",
+      "family": "pool_exhausted",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.19383070000913,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: connection pool exhausted",
+            "probable_root_cause": "Potential connection pool exhaustion due to high concurrent requests or resource limitations",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "Database connection pool",
+            "evidence_lines": [
+              "[ERROR] example-1 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0"
+            ],
+            "recommended_actions": [
+              "Monitor connection pool usage and adjust capacity based on load",
+              "Optimize application logic to reduce concurrent requests",
+              "Implement connection pooling with proper sizing and eviction policies"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 9.699483699980192,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: connection pool exhausted",
+            "probable_root_cause": "Repeated occurrence of connection pool exhaustion in the same error pattern",
+            "confidence": 0.75,
+            "severity": "MEDIUM",
+            "affected_component": "example-1",
+            "evidence_lines": [
+              "[ERROR] example-1 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0",
+              "[ERROR] example-1 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0",
+              "[ERROR] example-1 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0"
+            ],
+            "recommended_actions": [
+              "Monitor connection pool usage and capacity in real-time.",
+              "Review application logic for resource contention or inefficient queries.",
+              "Consider increasing the capacity of the connection pool if feasible.",
+              "Implement connection pooling with proper configuration and monitoring."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "pool_exhausted-008",
+      "family": "pool_exhausted",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 13.503221199993277,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: connection pool exhausted",
+            "probable_root_cause": "Potential connection pool exhaustion due to high concurrent requests or resource limitations",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "example-2",
+            "evidence_lines": [
+              "[ERROR] example-2 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0"
+            ],
+            "recommended_actions": [
+              "Monitor connection pool usage and adjust capacity based on workload",
+              "Optimize application logic to reduce concurrent requests",
+              "Implement connection pooling with proper sizing and eviction policies"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 9.156051700003445,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: connection pool exhausted",
+            "probable_root_cause": "Repeated occurrence of connection pool exhaustion in example-2 and example-1, suggesting a resource contention issue or configuration flaw.",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "Database connection pool",
+            "evidence_lines": [
+              "[ERROR] example-2 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0",
+              "[ERROR] example-2 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0",
+              "[ERROR] example-2 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0"
+            ],
+            "recommended_actions": [
+              "Monitor connection pool usage and capacity in real-time.",
+              "Review application logic for resource contention or inefficient queries.",
+              "Consider increasing the capacity of the connection pool if feasible.",
+              "Implement connection pooling configuration optimizations."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "healthy-006",
+      "family": "healthy",
+      "detected": false,
+      "should_detect": false,
+      "outputs": {}
+    },
+    {
+      "id": "healthy-007",
+      "family": "healthy",
+      "detected": false,
+      "should_detect": false,
+      "outputs": {}
+    },
+    {
+      "id": "healthy-008",
+      "family": "healthy",
+      "detected": false,
+      "should_detect": false,
+      "outputs": {}
+    },
+    {
+      "id": "unresolved-006",
+      "family": "unresolved",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.804731699987315,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+            "probable_root_cause": "Potential timeout due to lack of upstream metrics or configuration",
+            "confidence": 0.7,
+            "severity": "LOW",
+            "affected_component": "API Gateway",
+            "evidence_lines": [
+              "[ERROR] example-0 TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+              "[ERROR] example-0 TimeoutError: request exceeded deadline; no upstream metrics or configuration available"
+            ],
+            "recommended_actions": [
+              "Check upstream metrics configuration for available data",
+              "Verify API Gateway settings for timeout handling",
+              "Monitor API Gateway logs for potential bottlenecks"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 7.973657199996524,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+            "probable_root_cause": "TimeoutError due to lack of upstream metrics or configuration",
+            "confidence": 0.6,
+            "severity": "LOW",
+            "affected_component": "request",
+            "evidence_lines": [
+              "[ERROR] example-0 TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+              "[ERROR] example-0 TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+              "[ERROR] example-0 TimeoutError: request exceeded deadline; no upstream metrics or configuration available"
+            ],
+            "recommended_actions": [
+              "Check upstream configuration for available metrics",
+              "Verify if the service is properly configured for request handling",
+              "Monitor the service for any potential configuration issues"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "unresolved-007",
+      "family": "unresolved",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 5.891117799998028,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+            "probable_root_cause": "Potential timeout issue due to missing upstream metrics or configuration",
+            "confidence": 0.5,
+            "severity": "LOW",
+            "affected_component": "Request handling",
+            "evidence_lines": [
+              "[ERROR] example-1 TimeoutError: request exceeded deadline; no upstream metrics or configuration available"
+            ],
+            "recommended_actions": [
+              "Check upstream configuration for metrics availability",
+              "Verify request handling logic for timeout scenarios",
+              "Monitor request timing and latency for potential bottlenecks"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 8.734794699994382,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated TimeoutError logs for example-1 and example-0",
+            "probable_root_cause": "TimeoutError due to lack of upstream metrics or configuration",
+            "confidence": 0.6,
+            "severity": "LOW",
+            "affected_component": "request handling",
+            "evidence_lines": [
+              "[ERROR] example-1 TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+              "[ERROR] example-1 TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+              "[ERROR] example-1 TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+              "[ERROR] example-1 TimeoutError: request exceeded deadline; no upstream metrics or configuration available"
+            ],
+            "recommended_actions": [
+              "Check upstream configuration for example-1 and example-0",
+              "Verify if metrics are properly configured for the service",
+              "Monitor request rates and adjust timeout settings if necessary"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "unresolved-008",
+      "family": "unresolved",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 5.97015339997597,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+            "probable_root_cause": "Potential timeout due to lack of upstream metrics or configuration",
+            "confidence": 0.6,
+            "severity": "LOW",
+            "affected_component": "API Gateway",
+            "evidence_lines": [
+              "[ERROR] example-2 TimeoutError: request exceeded deadline; no upstream metrics or configuration available"
+            ],
+            "recommended_actions": [
+              "Verify upstream configuration for the API Gateway",
+              "Check if metrics are properly configured for the endpoint",
+              "Monitor the API Gateway for any rate limiting or timeout issues"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 9.13706100001582,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated TimeoutError logs for example-2 and example-1",
+            "probable_root_cause": "TimeoutError due to lack of upstream metrics or configuration",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "example-2",
+            "evidence_lines": [
+              "[ERROR] example-2 TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+              "[ERROR] example-2 TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+              "[ERROR] example-2 TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+              "[ERROR] example-2 TimeoutError: request exceeded deadline; no upstream metrics or configuration available"
+            ],
+            "recommended_actions": [
+              "Check upstream configuration for example-2",
+              "Verify availability of upstream metrics for example-2",
+              "Monitor request rates and timing for example-2"
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    }
+  ],
+  "limitations": [
+    "Controlled same-template cases; not production generalization.",
+    "Term matching and abstention are automated proxies, not independently scored diagnosis correctness.",
+    "Matching evidence lines does not establish semantic support.",
+    "Peak RSS sums processes and may double count shared pages."
+  ],
+  "prompt_version": "local-rca-v2-evidence-enum",
+  "run_date": "2026-11-17",
+  "runtime": "llama.cpp b12443",
+  "model_sha256": "d2387ca2dbfee2ffabce7120d3770dadca0b293052bc2f0e138fdc940d9bc7b5"
+}

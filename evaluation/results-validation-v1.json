@@ -1,0 +1,831 @@
+{
+  "partial": false,
+  "split": "validation",
+  "model": "astraeus-qwen3-1.7b",
+  "semantic": true,
+  "metrics": {
+    "cases": 27,
+    "detection_precision": 1.0,
+    "detection_recall": 1.0,
+    "false_alerts": 0,
+    "latency_p50_s": 6.226292800012743,
+    "latency_p95_s": 7.523493399989093,
+    "peak_process_tree_rss_gib": 3.281707763671875,
+    "lexical_hit_at_3": 1.0,
+    "semantic_hit_at_3": 1.0,
+    "base": {
+      "attempts": 24,
+      "valid_reports": 17,
+      "term_match_proxy": 0.5416666666666666
+    },
+    "retrieval": {
+      "attempts": 24,
+      "valid_reports": 1,
+      "term_match_proxy": 0.041666666666666664
+    }
+  },
+  "rows": [
+    {
+      "id": "missing_config-006",
+      "family": "missing_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "rejected",
+          "latency_s": 6.9999861999822315,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.252958400000352,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "missing_config-007",
+      "family": "missing_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "rejected",
+          "latency_s": 6.633417400007602,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 7.372128299990436,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "missing_config-008",
+      "family": "missing_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "rejected",
+          "latency_s": 8.258447500003967,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 7.970626499998616,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "invalid_config-006",
+      "family": "invalid_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.299874900025316,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Untrusted logs provided, insufficient evidence for confirmed cause",
+            "probable_root_cause": "JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+            "confidence": 0.5,
+            "severity": "LOW",
+            "affected_component": "JSON decoding",
+            "evidence_lines": [
+              "[ERROR] example-0 JSONDecodeError: Expecting property name enclosed in double quotes at line 1"
+            ],
+            "recommended_actions": [
+              "Verify log sources for trustworthiness",
+              "Check JSON formatting and encoding practices",
+              "Implement validation checks for JSON data"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.035180700011551,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "invalid_config-007",
+      "family": "invalid_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 7.1994292000017595,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Potential JSON decoding error in log entry",
+            "probable_root_cause": "JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+            "confidence": 0.7,
+            "severity": "LOW",
+            "affected_component": "JSON decoding",
+            "evidence_lines": [
+              "[ERROR] example-1 JSONDecodeError: Expecting property name enclosed in double quotes at line 1"
+            ],
+            "recommended_actions": [
+              "Verify that JSON input is properly formatted with double-quoted property names.",
+              "Check for any trailing or leading whitespace in the JSON input.",
+              "Ensure that the JSON decoder is correctly configured to handle nested structures."
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.21597090002615,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "invalid_config-008",
+      "family": "invalid_config",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.533598999987589,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Untrusted logs provided, insufficient evidence for confirmed cause",
+            "probable_root_cause": "JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+            "confidence": 0.5,
+            "severity": "LOW",
+            "affected_component": "JSON decoding",
+            "evidence_lines": [
+              "[ERROR] example-2 JSONDecodeError: Expecting property name enclosed in double quotes at line 1"
+            ],
+            "recommended_actions": [
+              "Verify log sources for authenticity and reliability",
+              "Check JSON input format for consistency",
+              "Implement validation checks for JSON data",
+              "Consider using a JSON decoder with error handling"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "valid",
+          "latency_s": 8.802090099983616,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Repeated JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+            "probable_root_cause": "Repeated errors suggest a consistent issue with JSON parsing, possibly due to malformed JSON input or incorrect formatting in the data being parsed.",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "example-2",
+            "evidence_lines": [
+              "[ERROR] example-2 JSONDecodeError: Expecting property name enclosed in double quotes at line 1",
+              "[ERROR] example-2 JSONDecodeError: Expecting property name enclosed in double quotes at line 1"
+            ],
+            "recommended_actions": [
+              "Verify the JSON input for malformed or incorrectly formatted data.",
+              "Check if the data source is providing valid JSON structures.",
+              "Ensure that the parsing logic correctly handles edge cases, such as nested objects or special characters."
+            ]
+          }
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "database_locked-006",
+      "family": "database_locked",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.802065700001549,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "OperationalError: database is locked; concurrent writer transaction active",
+            "probable_root_cause": "A concurrent writer transaction is active, leading to a database lock. This could be due to high write contention, slow query execution, or concurrent database operations.",
+            "confidence": 0.7,
+            "severity": "HIGH",
+            "affected_component": "database",
+            "evidence_lines": [
+              "[ERROR] example-0 OperationalError: database is locked; concurrent writer transaction active"
+            ],
+            "recommended_actions": [
+              "Monitor database performance and query execution times.",
+              "Optimize concurrent write operations or consider database sharding.",
+              "Review application logic to reduce contention during peak loads."
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.863812299998244,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "database_locked-007",
+      "family": "database_locked",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.19139069999801,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "OperationalError: database is locked; concurrent writer transaction active",
+            "probable_root_cause": "Concurrency issue involving multiple writers to the same database resource",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-1 OperationalError: database is locked; concurrent writer transaction active"
+            ],
+            "recommended_actions": [
+              "Monitor database performance and resource usage",
+              "Review concurrent access patterns and optimize queries",
+              "Consider implementing database locking mechanisms or transaction isolation levels"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 9.618547599995509,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "database_locked-008",
+      "family": "database_locked",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 5.627299200015841,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "OperationalError: database is locked; concurrent writer transaction active",
+            "probable_root_cause": "Concurrency issue in database transaction",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-2 OperationalError: database is locked; concurrent writer transaction active"
+            ],
+            "recommended_actions": [
+              "Monitor database for concurrent transactions",
+              "Review application code for locking mechanisms",
+              "Consider increasing database lock timeout settings"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.326809099991806,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "unique_violation-006",
+      "family": "unique_violation",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.911322100000689,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "IntegrityError: UNIQUE constraint failed for items.id",
+            "probable_root_cause": "A duplicate entry was inserted for the items.id field, violating the UNIQUE constraint.",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "items.id",
+            "evidence_lines": [
+              "[ERROR] example-0 IntegrityError: UNIQUE constraint failed: items.id; insert rejected"
+            ],
+            "recommended_actions": [
+              "Implement unique constraint on items.id in the database.",
+              "Ensure that the id field is auto-incrementing or has a unique index.",
+              "Validate input data to prevent duplicate entries."
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.688141399994493,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "unique_violation-007",
+      "family": "unique_violation",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 7.523493399989093,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Uniqueness constraint violation during insertion",
+            "probable_root_cause": "A duplicate 'id' value was inserted into the 'items' table, violating the UNIQUE constraint on 'id'",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database (items table)",
+            "evidence_lines": [
+              "[ERROR] example-1 IntegrityError: UNIQUE constraint failed: items.id; insert rejected"
+            ],
+            "recommended_actions": [
+              "Implement a check to ensure unique 'id' values are not duplicated before insertion",
+              "Use database constraints or triggers to enforce uniqueness on 'id'",
+              "Monitor database logs for duplicate entries and address them promptly"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.120851800020318,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "unique_violation-008",
+      "family": "unique_violation",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 7.034638099983567,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Uniqueness constraint violation during insertion",
+            "probable_root_cause": "Attempted to insert a duplicate 'id' value into the 'items' table, which has a UNIQUE constraint on 'id'",
+            "confidence": 0.7,
+            "severity": "MEDIUM",
+            "affected_component": "Database",
+            "evidence_lines": [
+              "[ERROR] example-2 IntegrityError: UNIQUE constraint failed: items.id; insert rejected"
+            ],
+            "recommended_actions": [
+              "Verify that the 'id' values being inserted are unique",
+              "Check for duplicate entries in the 'items' table",
+              "Review the application logic for id generation",
+              "Ensure that the database constraint is properly enforced"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.981283899978735,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "missing_file-006",
+      "family": "missing_file",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 5.409311499999603,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "File not found error in configuration file",
+            "probable_root_cause": "Missing configuration file",
+            "confidence": 0.6,
+            "severity": "LOW",
+            "affected_component": "Configuration system",
+            "evidence_lines": [
+              "[ERROR] example-0 FileNotFoundError: config-6.json does not exist"
+            ],
+            "recommended_actions": [
+              "Check if config-6.json exists in the expected directory",
+              "Verify file permissions for the configuration file",
+              "Ensure the correct path is being used in the configuration"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 6.455713500006823,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "missing_file-007",
+      "family": "missing_file",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "rejected",
+          "latency_s": 7.789401200017892,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 5.97882939997362,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "missing_file-008",
+      "family": "missing_file",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "rejected",
+          "latency_s": 7.398315600003116,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 9.355406099988613,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "connection_refused-006",
+      "family": "connection_refused",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "rejected",
+          "latency_s": 6.443438599992078,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 7.992075599991949,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "connection_refused-007",
+      "family": "connection_refused",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.226292800012743,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Potential connection issue with local dependency",
+            "probable_root_cause": "Untrusted logs indicate a connection refused error, suggesting the listener may not be running or accessible",
+            "confidence": 0.3,
+            "severity": "LOW",
+            "affected_component": "example-1",
+            "evidence_lines": [
+              "[ERROR] example-1 ConnectionRefusedError: connection refused by local dependency; listener is not running"
+            ],
+            "recommended_actions": [
+              "Verify that the listener is running on the expected port",
+              "Check network accessibility to the local dependency",
+              "Review logs for any additional error messages or warnings"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.115950099978363,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "connection_refused-008",
+      "family": "connection_refused",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.706684800010407,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "Untrusted logs provided; historical context unavailable.",
+            "probable_root_cause": "ConnectionRefusedError: connection refused by local dependency; listener is not running",
+            "confidence": 0.3,
+            "severity": "LOW",
+            "affected_component": "example-2",
+            "evidence_lines": [
+              "[ERROR] example-2 ConnectionRefusedError: connection refused by local dependency; listener is not running"
+            ],
+            "recommended_actions": [
+              "Verify that the listener is running on the expected port.",
+              "Check the local dependency configuration for correct binding settings.",
+              "Review logs for any additional error messages or timestamps related to the connection attempt."
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 9.138542400003644,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "pool_exhausted-006",
+      "family": "pool_exhausted",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 5.78800680002314,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: connection pool exhausted",
+            "probable_root_cause": "Possible due to high concurrent requests or inefficient resource management",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "connection pool",
+            "evidence_lines": [
+              "[ERROR] example-0 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0"
+            ],
+            "recommended_actions": [
+              "Monitor connection pool usage and capacity",
+              "Optimize application logic to reduce concurrent requests",
+              "Implement connection pooling with proper sizing and eviction policies"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.255508100002771,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "pool_exhausted-007",
+      "family": "pool_exhausted",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 5.823096299980534,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: connection pool exhausted",
+            "probable_root_cause": "Potential connection pool exhaustion due to high concurrent requests or resource limitations",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "Connection pool",
+            "evidence_lines": [
+              "[ERROR] example-1 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0"
+            ],
+            "recommended_actions": [
+              "Monitor connection pool usage and capacity",
+              "Optimize application logic to reduce concurrent requests",
+              "Consider increasing the connection pool size if feasible"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 7.879712399997516,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "pool_exhausted-008",
+      "family": "pool_exhausted",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.091869299998507,
+          "term_match_proxy": true,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: connection pool exhausted",
+            "probable_root_cause": "Potential connection pool exhaustion due to high concurrent requests or resource limitations",
+            "confidence": 0.6,
+            "severity": "MEDIUM",
+            "affected_component": "example-2",
+            "evidence_lines": [
+              "[ERROR] example-2 TimeoutError: connection pool exhausted; active=1 capacity=1 available=0"
+            ],
+            "recommended_actions": [
+              "Monitor connection pool usage and adjust capacity based on load",
+              "Optimize application logic to reduce concurrent requests",
+              "Implement connection pooling with proper sizing and eviction strategies"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.660510699992301,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "healthy-006",
+      "family": "healthy",
+      "detected": false,
+      "should_detect": false,
+      "outputs": {}
+    },
+    {
+      "id": "healthy-007",
+      "family": "healthy",
+      "detected": false,
+      "should_detect": false,
+      "outputs": {}
+    },
+    {
+      "id": "healthy-008",
+      "family": "healthy",
+      "detected": false,
+      "should_detect": false,
+      "outputs": {}
+    },
+    {
+      "id": "unresolved-006",
+      "family": "unresolved",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "rejected",
+          "latency_s": 6.505982300004689,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 7.159873399999924,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "unresolved-007",
+      "family": "unresolved",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.041033899993636,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+            "probable_root_cause": "Potential timeout due to lack of upstream metrics or configuration",
+            "confidence": 0.6,
+            "severity": "LOW",
+            "affected_component": "Request handling",
+            "evidence_lines": [
+              "[ERROR] example-1 TimeoutError: request exceeded deadline; no upstream metrics or configuration available"
+            ],
+            "recommended_actions": [
+              "Check upstream metrics configuration for available metrics",
+              "Verify if the request handling logic is properly configured",
+              "Monitor request timing and latency for potential bottlenecks"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.118058099993505,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    },
+    {
+      "id": "unresolved-008",
+      "family": "unresolved",
+      "detected": true,
+      "should_detect": true,
+      "outputs": {
+        "base": {
+          "status": "valid",
+          "latency_s": 6.086901700007729,
+          "term_match_proxy": false,
+          "abstention_proxy": false,
+          "report": {
+            "summary": "TimeoutError: request exceeded deadline; no upstream metrics or configuration available",
+            "probable_root_cause": "Possible timeout due to lack of upstream metrics or configuration",
+            "confidence": 0.7,
+            "severity": "LOW",
+            "affected_component": "Request timeout",
+            "evidence_lines": [
+              "[ERROR] example-2 TimeoutError: request exceeded deadline; no upstream metrics or configuration available"
+            ],
+            "recommended_actions": [
+              "Check upstream metrics configuration for example-2",
+              "Verify if upstream services are properly configured",
+              "Monitor request timing and latency for example-2"
+            ]
+          }
+        },
+        "retrieval": {
+          "status": "rejected",
+          "latency_s": 8.36660269999993,
+          "error": "Local model returned an invalid report or unsupported evidence; report was not saved."
+        }
+      },
+      "lexical_hit_at_3": true,
+      "semantic_hit_at_3": true
+    }
+  ],
+  "limitations": [
+    "Controlled same-template cases; not production generalization.",
+    "Term matching and abstention are automated proxies, not independently scored diagnosis correctness.",
+    "Matching evidence lines does not establish semantic support.",
+    "Peak RSS sums processes and may double count shared pages."
+  ],
+  "prompt_version": "local-rca-v1",
+  "run_date": "2026-11-17",
+  "runtime": "llama.cpp b12443",
+  "model_sha256": "d2387ca2dbfee2ffabce7120d3770dadca0b293052bc2f0e138fdc940d9bc7b5"
+}

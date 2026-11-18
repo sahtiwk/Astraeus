@@ -1,0 +1,27 @@
+name: Windows release candidate
+on:
+  push:
+    branches: [codex/windows-offline-mvp]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  install-and-package:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install with verified bootstrap and private Python
+        shell: powershell
+        run: .\install.ps1 -Profile Core
+      - name: Install regression runner
+        run: .bootstrap/uv.exe pip install --python .venv/Scripts/python.exe pytest==9.0.3
+      - name: Test and package
+        run: |
+          .venv/Scripts/python.exe -m pytest -q
+          .venv/Scripts/python.exe scripts/package_release.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: astraeus-windows-x64-rc1
+          path: |
+            dist/*.zip
+            dist/*.sha256
