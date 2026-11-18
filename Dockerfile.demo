@@ -1,0 +1,11 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements-demo.txt .
+RUN pip install --no-cache-dir -r requirements-demo.txt && pip check
+COPY demo.py .
+COPY src/pipeline.py src/parser.py src/anomaly.py src/privacy.py src/schemas.py ./src/
+COPY data/samples/app_error.log data/samples/db_timeout.log data/samples/nginx_500.log ./data/samples/
+ENV HOME=/tmp PORT=10000 STREAMLIT_BROWSER_GATHER_USAGE_STATS=false PYTHONDONTWRITEBYTECODE=1
+USER 10001:10001
+EXPOSE 10000
+CMD ["sh", "-c", "exec python -m streamlit run demo.py --server.address=0.0.0.0 --server.port=\"$PORT\" --server.headless=true --server.fileWatcherType=none"]

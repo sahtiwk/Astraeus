@@ -1,0 +1,15 @@
+**
+!requirements-demo.txt
+!demo.py
+!src/
+!src/__init__.py
+!src/pipeline.py
+!src/parser.py
+!src/anomaly.py
+!src/privacy.py
+!src/schemas.py
+!data/
+!data/samples/
+!data/samples/app_error.log
+!data/samples/db_timeout.log
+!data/samples/nginx_500.log

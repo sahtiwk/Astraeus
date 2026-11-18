@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: astraeus-demo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile.demo
+    healthCheckPath: /_stcore/health

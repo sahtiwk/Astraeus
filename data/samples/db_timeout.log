@@ -1,0 +1,8 @@
+2026-05-29 11:30:00 INFO db-service Starting database connection pool
+2026-05-29 11:30:15 INFO api-gateway Request received for user profile
+2026-05-29 11:30:45 WARN db-service Connection pool nearing capacity
+2026-05-29 11:31:00 ERROR db-service Database connection timeout after 30000ms
+2026-05-29 11:31:05 ERROR db-service Database connection timeout after 30000ms
+2026-05-29 11:31:10 ERROR db-service Database connection timeout after 30000ms
+2026-05-29 11:31:15 FATAL db-service Connection refused by host
+2026-05-29 11:31:20 INFO api-gateway Request failed, returning 500
