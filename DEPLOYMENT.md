@@ -31,3 +31,9 @@ If setting up a Web Service directly, select the same branch, Docker runtime,
 Dockerfile.demo as the Dockerfile path, the Free instance, and
 /_stcore/health as the health check. The service reads Render's PORT variable.
 Verify the assigned HTTPS URL and each sample after deployment.
+
+Live deployment verified 2026-11-18 at https://astraeus-demo.onrender.com.
+Render service srv-dbui9s08v5cc7396o9a0 uses the Free plan in Oregon,
+branch codex/public-demo, Dockerfile.demo and /_stcore/health.
+The public application-error sample produced an incident, source evidence and
+an export control during browser verification. Free instances sleep when idle.
